@@ -1,8 +1,11 @@
 'use client';
 
 import { AuthUpdater } from "@/components/AuthUpdater";
-import AuthViewer from "@/components/AuthView";
 import { ReduxProvider } from "@/redux-provider";
+
+import dynamic from "next/dynamic";
+
+const AuthViewerDinamic = dynamic(() => import("@/components/AuthView"), { ssr: false });
 
 export default function Home() {
   return (
@@ -17,7 +20,7 @@ export default function Home() {
 
           <h3>AuthViewer</h3>
 
-          <AuthViewer />
+          <AuthViewerDinamic />
 
           <h3>AuthUpdater</h3>
 
