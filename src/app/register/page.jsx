@@ -3,7 +3,6 @@
 import Head from "next/head";
 import { signUp } from "@/services/auth.service";
 import { useState } from "react";
-import { redirect } from "next/navigation";
 
 
 export default function Register() {
@@ -37,37 +36,37 @@ export default function Register() {
     }
 
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between p-24 max-w-[500]px">
+        <main className="flex min-h-screen flex-col items-center justify-between">
 
             <Head>
                 <title>Register</title>
             </Head>
 
-            <div className="border p-4 w-full rounded-xl">
-                <h2 className="text-2xl font-semibold" >Register</h2>
+            <div className="border p-4 w-full max-w-[400px] rounded-xl">
+                <h2 className="text-2xl font-semibold mb-3 text-center" >Register</h2>
                 <p className="text-red-500">{error}</p>
                 <p className="text-green-500">{success}</p>
                 <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                     <label className="flex flex-col gap-2">
-                        Firstname: <input className="text-black" type="text" name="firstname" required placeholder="Firstname" />
+                        Firstname: <input className="text-black p-2 border outline-none focus:border-green-400" type="text" name="firstname" required placeholder="Firstname" />
                     </label>
                     <label className="flex flex-col gap-2">
-                        Lastname: <input className="text-black" type="text" name="lastname" required placeholder="Lastname" />
+                        Lastname: <input className="text-black p-2 border outline-none focus:border-green-400" type="text" name="lastname" required placeholder="Lastname" />
                     </label>
                     <label className="flex flex-col gap-2">
-                        Email: <input className="text-black" type="email" name="email" required placeholder="Email" />
+                        Email: <input className="text-black p-2 border outline-none focus:border-green-400" type="email" name="email" required placeholder="Email" />
                     </label>
                     <label className="flex flex-col gap-2">
-                        City: <input className="text-black" type="text" name="city" required placeholder="City" />
+                        City: <input className="text-black p-2 border outline-none focus:border-green-400" type="text" name="city" required placeholder="City" />
                     </label>
                     <label className="flex flex-col gap-2">
-                        Password: <input className="text-black" type="password" name="password" required placeholder="Password" />
+                        Password: <input className="text-black p-2 border outline-none focus:border-green-400" type="password" name="password" required placeholder="Password" />
                     </label>
                     <label className="flex flex-col gap-2">
-                        Confirm password: <input className="text-black" type="password" name="password2" required placeholder="Confirm password" />
+                        Confirm password: <input className="text-black p-2 border outline-none focus:border-green-400" type="password" name="password2" required placeholder="Confirm password" />
                     </label>
                     <label className="flex flex-col gap-2">
-                        Profile Image URL: <input className="text-black" type="url" name="profileImage" required placeholder="Profile Image URL" />
+                        Profile Image URL: <input className="text-black p-2 border outline-none focus:border-green-400" type="url" name="profileImage" required placeholder="Profile Image URL" />
                     </label>
                     <div className="flex justify-center">
                         <button className="p-2 bg-green-500 rounded-md text-white" type="submit">Register</button>

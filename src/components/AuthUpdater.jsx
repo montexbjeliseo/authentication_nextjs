@@ -6,7 +6,6 @@ export const AuthUpdater = () => {
 
     const dispatch = useDispatch();
 
-
     return (
         <div>
             <button onClick={() => dispatch(setAuthState(true))}>Log in</button>

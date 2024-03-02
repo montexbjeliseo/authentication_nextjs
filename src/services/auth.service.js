@@ -1,5 +1,5 @@
 export const signUp = async (payload) => {
-    const response = await fetch('https://petsapi-server.onrender.com/api/auth/register', {
+    const response = await fetch('https://pets-api.montexbjeliseo.com.ar/api/auth/register', {
         headers: {
             'Content-Type': 'application/json'
         },
@@ -10,7 +10,7 @@ export const signUp = async (payload) => {
 }
 
 export const signIn = (payload) => {
-    return fetch('https://petsapi-server.onrender.com/api/auth/login', {
+    return fetch('https://pets-api.montexbjeliseo.com.ar/api/auth/login', {
         headers: {
             'Content-Type': 'application/json'
         },

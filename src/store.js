@@ -1,10 +1,8 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 
 import authReducer from "./slices/authSlice";
-// import storage from "redux-persist/lib/storage";
 import persistReducer from "redux-persist/es/persistReducer";
 import createWebStorage from "redux-persist/es/storage/createWebStorage";
-
 
 
 const createNoopStorage = () => {
@@ -29,7 +27,7 @@ const storage =
 const authPersistConfig = {
     key: "auth",
     storage: storage,
-    whitelist: ["authState"],
+    whitelist: ["authState", "token"],
 }
 
 const persistedReducer = persistReducer(authPersistConfig, authReducer);
